@@ -39,6 +39,69 @@
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
+
+		<script type="text/javascript">
+
+jQuery( document ).ready(function() {
+    var elementPosition = jQuery('#masthead').offset();
+
+jQuery(window).scroll(function(){
+        if(jQuery(window).scrollTop() > 20){
+              jQuery('#masthead').addClass("menuflotante");
+        } else {
+            jQuery('#masthead').removeClass('menuflotante');
+        }    
+});
+
+});
+
+</script>
+<style type="text/css">
+	.tp-bullets{
+		width: 100% !important;
+	}
+
+	.hephaistos .tp-bullet {
+		width: initial !important;
+	}
+	@media only screen and (max-width: 768px) {
+		.tp-bullets{ 
+		display: block;
+		}
+		.tp-tab.selected{
+			display: block !important;
+		}
+		.tp-tab {
+			display: none;
+		}
+	}
+
+	@media (min-width: 769px) {
+		.tp-bullets {
+			display: none;
+		}
+	}
+
+	@media screen and (min-width: 48em){
+
+.js .menu-toggle, .js .dropdown-toggle {
+    display: block !important;
+}
+
+.js .main-navigation > div > ul {
+	display: none !important;
+}
+}
+.top-menu {
+	display: none;
+}
+
+#top-menu, .menu-toggle {
+	/*background: red;*/
+}
+
+</style>
+
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>

@@ -1310,9 +1310,7 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .navigation-top {
-	background: #fff;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
+	
 	font-size: 16px;
 	font-size: 1rem;
 	position: relative;
@@ -1548,8 +1546,10 @@ body {
 }
 
 .site-header {
-	background-color: #fafafa;
-	position: relative;
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    top: 23px;
 }
 
 /* Site branding */
@@ -3349,7 +3349,7 @@ p > object:only-child {
 	/* Layout */
 
 	.wrap {
-		max-width: 1000px;
+		max-width: 1170px;
 		padding-left: 3em;
 		padding-right: 3em;
 	}
@@ -3472,7 +3472,7 @@ p > object:only-child {
 		position: fixed;
 		left: 0;
 		right: 0;
-		top: 0;
+		top: 6px;
 		width: 100%;
 		z-index: 7;
 	}
@@ -3724,7 +3724,7 @@ p > object:only-child {
 
 	.panel-content .wrap {
 		padding-bottom: 4.5em;
-		padding-top: 6em;
+		padding-top: 0em;
 	}
 
 	.panel-image {
@@ -3823,7 +3823,7 @@ p > object:only-child {
 	body.page-two-column:not(.archive) #primary .entry-header,
 	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
 		float: left;
-		width: 36%;
+		width: 100%;
 	}
 
 	.blog:not(.has-sidebar) #primary article,
@@ -3834,7 +3834,7 @@ p > object:only-child {
 	body.page-two-column:not(.archive) #primary .entry-content,
 	body.page-two-column #comments {
 		float: right;
-		width: 58%;
+		width: 100%;
 	}
 
 	.blog .site-main > article,
@@ -3941,7 +3941,7 @@ p > object:only-child {
 	}
 
 	.page:not(.home) #content {
-		padding-bottom: 3.25em;
+		padding-bottom: 0em;
 	}
 
 	/* 404 page */
@@ -4006,7 +4006,7 @@ p > object:only-child {
 		font-size: 14px;
 		font-size: 0.875rem;
 		line-height: 1.6;
-		margin-top: 3em;
+		margin-top: 0em;
 	}
 
 	.site-footer .widget-column.footer-widget-1 {
@@ -4304,4 +4304,165 @@ p > object:only-child {
 	.site-footer {
 		padding: 0;
 	}
+}
+/*estilos yaya*/
+footer#colophon {
+    background-color: black;
+    color: white;
+}
+ul.menu-footer li {
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 10px;
+}
+ul.menu-footer {
+    float: right;
+}
+ul.menu-footer li a {
+    text-decoration: none !important;
+    font-size: 15px;
+}
+header.entry-header {
+    display: none;
+}
+
+.tp-tabs-inner-wrapper div:nth-child(1):before {
+    content: 'Háblanos de tu proyecto';
+
+    font-family: "Work Sans";
+        font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+        text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.tp-tabs-inner-wrapper div:nth-child(1):after {
+    content: '';
+   width: 20px;
+   height: 20px;
+   background-color: #3dd381;
+       position: absolute;
+    top: 0;
+    z-index: 1000000;
+    border-radius: 50%;
+    background-color: #3dd381;
+    left: 12px;
+
+}
+.tp-tabs-inner-wrapper div:nth-child(2):after {
+    content: '';
+   width: 20px;
+   height: 20px;
+   background-color: #3dd381;
+       position: absolute;
+    top: 0;
+    z-index: 1000000;
+    border-radius: 50%;
+    background-color: #3dd381;
+    left: 18px;
+
+}
+.tp-tabs-inner-wrapper div:nth-child(3):after {
+    content: '';
+   width: 20px;
+   height: 20px;
+   background-color: #3dd381;
+       position: absolute;
+    top: 0;
+    z-index: 1000000;
+    border-radius: 50%;
+    background-color: #3dd381;
+    left: 33px;
+
+}
+.tp-tabs-inner-wrapper div:nth-child(2):before {
+    content: 'Te gusta la propuesta';
+        font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+        text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.tp-tabs-inner-wrapper div:nth-child(3):before {
+    content: 'Puesta en marcha';
+       font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+        text-align: center;
+    display: flex;
+    justify-content: center;
+}
+div#rev_slider_4_3_wrapper .tp-tabs-inner-wrapper div:nth-child(1):before {
+    content: 'Deportes';
+        font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+}
+div#rev_slider_4_3_wrapper .tp-tabs-inner-wrapper div:nth-child(2):before {
+    content: 'Empresas';
+       font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+}
+div#rev_slider_4_3_wrapper .tp-tabs-inner-wrapper div:nth-child(3):before {
+    content: 'Startups';
+        font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+}
+div#rev_slider_4_3_wrapper .tp-tabs-inner-wrapper div:nth-child(4):before {
+    content: 'Juegos';
+        font-family: "Work Sans";
+    font-weight: 400;
+    color: #000;
+}
+div#rev_slider_4_3_wrapper .tp-tabs-inner-wrapper div:nth-child(5):before {
+    content: 'Turismo';
+    font-family: "Work Sans";
+}
+.project {
+    box-shadow: rgb(206, 210, 216) 0px 2px 0px 0px;
+    text-align: left;
+    margin-top: 2em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(206, 210, 216);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 1.5em;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0 !important;
+    margin-bottom: 10px;
+}
+.menuflotante {
+    background-color: #000;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 100000;
+    height: 65px;
+    top: 0;
+    display: inline-block;
+}
+.titulares-principales h2 {
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+        font-size: 45px;
+}
+.logo-kentia{
+    width: 200px;
+}
+h5.subtitulos-funcionamiento {
+    text-transform: inherit;
+    font-size: 23px !important;
+    text-align: left;
+    font-weight: 500 !important;
 }

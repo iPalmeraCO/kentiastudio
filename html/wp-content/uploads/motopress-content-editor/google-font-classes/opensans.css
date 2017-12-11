@@ -1,5 +1,7 @@
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,regular,700');
-.mpce-font-opensans *{font-family: Open Sans;}
-.mpce-font-opensans-300 *{font-family : Open Sans;}.mpce-font-opensans-300 *{font-style:normal !important;font-weight:300 !important;}.mpce-font-opensans-300 strong{ font-weight: 400 !important;}.mpce-font-opensans-300 em{font-style:italic !important;}
-.mpce-font-opensans-regular *{font-family : Open Sans;}.mpce-font-opensans-regular *{font-style:normal !important;font-weight:400 !important;}.mpce-font-opensans-regular strong{ font-weight: 700 !important;}.mpce-font-opensans-regular em{font-style:italic !important;}
-.mpce-font-opensans-700 *{font-family : Open Sans;}.mpce-font-opensans-700 *{font-style:normal !important;font-weight:700 !important;}.mpce-font-opensans-700 strong{ font-weight: 700 !important;}.mpce-font-opensans-700 em{font-style:italic !important;}
+@import url('//fonts.googleapis.com/css?family=Work+Sans:300,regular,500,600,700');
+.mpce-font-opensans *{font-family: Work Sans;}
+.mpce-font-opensans-300 *{font-family : Work Sans;}.mpce-font-opensans-300 *{font-style:normal !important;font-weight:300 !important;}.mpce-font-opensans-300 strong{ font-weight: 400 !important;}.mpce-font-opensans-300 em{font-style:italic !important;}
+.mpce-font-opensans-regular *{font-family : Work Sans;}.mpce-font-opensans-regular *{font-style:normal !important;font-weight:400 !important;}.mpce-font-opensans-regular strong{ font-weight: 700 !important;}.mpce-font-opensans-regular em{font-style:italic !important;}
+.mpce-font-opensans-500 *{font-family : Work Sans;}.mpce-font-opensans-500 *{font-style:normal !important;font-weight:500 !important;}.mpce-font-opensans-500 strong{ font-weight: 700 !important;}.mpce-font-opensans-500 em{font-style:italic !important;}
+.mpce-font-opensans-600 *{font-family : Work Sans;}.mpce-font-opensans-600 *{font-style:normal !important;font-weight:600 !important;}.mpce-font-opensans-600 strong{ font-weight: 700 !important;}.mpce-font-opensans-600 em{font-style:italic !important;}
+.mpce-font-opensans-700 *{font-family : Work Sans;}.mpce-font-opensans-700 *{font-style:normal !important;font-weight:700 !important;}.mpce-font-opensans-700 strong{ font-weight: 700 !important;}.mpce-font-opensans-700 em{font-style:italic !important;}
