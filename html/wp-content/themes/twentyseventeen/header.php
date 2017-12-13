@@ -17,6 +17,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="KentiaStudio un grupo de expertos en desarrollo Web y apps para empresas, especializados en Android,  iOS y programación avanzada." />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
@@ -40,14 +41,17 @@
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
 <!-- FUENTES-->
 
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/estilosjulian.css" rel="stylesheet">
 
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
+<?php if (!is_front_page()){
+	$class = "menuinicial";
+} ?>
+	<header id="masthead" class="site-header <?php echo $class; ?>" role="banner">
 
 		<?php // get_template_part( 'template-parts/header/header', 'image' ); ?>
 		
@@ -55,10 +59,10 @@
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<div class="navigation-top">
 				<div class="wrap">
-					<div class="col-md-6">	
-						<img src="wp-content/themes/twentyseventeen/assets/images/studio.svg" alt="logo kentia" class="logo-kentia">	
+					<div class="col-xs-9 col-md-6">	
+						<a href="http://192.241.169.38/"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/studio.svg" alt="logo kentia" class="logo-kentia">	</a>
 					</div>
-					<div class="col-md-6">
+					<div class="col-xs-3 col-md-6 re">
 							<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>	
 					</div>	 
 					

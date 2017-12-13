@@ -12,23 +12,27 @@
 
 get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<style type="text/css">
+	.content404{
+		background: url("../wp-content/themes/twentyseventeen/assets/images/fondo404.png");
+	     background-size: 100% 100%;
+	}
+</style>
+<div class="content404">
+	<div class="textcenter c4">
+		<img src="/wp-content/themes/twentyseventeen/assets/images/arrowd.png"><h1 class="tit1">404</h1>
+		<img src="/wp-content/themes/twentyseventeen/assets/images/arrowi.png">
+	</div>
+	<div class="row c5 textcenter">
+		<h2>Página no </h2>
+		<h2>encontrada</h2>
+		<img class="x" src="/wp-content/themes/twentyseventeen/assets/images/x.png">		
+	</div>
+	<div class="row textcenter margindiez marginbottom">
+		<a href="<?php echo site_url(); ?>"><button type="button" class="button button-primary btnprin2" ">Ir a inicio</button></a>
+	</div>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyseventeen' ); ?></p>
 
-					<?php get_search_form(); ?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
-
+</div>
 <?php get_footer();

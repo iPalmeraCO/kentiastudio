@@ -584,3 +584,10 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+function formulario_precios() {
+	ob_start();
+    get_template_part('formprecio');
+    return ob_get_clean(); 
+}
+add_shortcode('formprecio', 'formulario_precios');

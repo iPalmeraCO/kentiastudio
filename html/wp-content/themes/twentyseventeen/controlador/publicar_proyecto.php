@@ -20,9 +20,12 @@ $targetPath = "../proyectos/".$nombrearchivo; // Target path where file is to be
 */
 
 $foto = reset($_FILES);
-$html = $_POST["descripcion"];
+$html  = "Proyecto: ".$_POST['quenecesitas']."<br>";
+$html .= "Descripción: ".$_POST["descripcion"]."<br>";
+$html .= "Correo: " . $_POST["email"]."<br>";
+$html .= "Telefono: " . $_POST["telefono"]."<br>";
 $mail = new MailM();
-$mail->enviarmail($_POST["email"], "Usuario ", "Proyecto", $html, $foto);
+$mail->enviarmail("julian.escobar@ipalmera.co", "Usuario ", "Proyecto", $html, $foto);
 
 
 

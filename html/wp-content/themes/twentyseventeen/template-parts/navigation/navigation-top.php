@@ -11,10 +11,10 @@
 ?>
 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentyseventeen' ); ?>">
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
+		<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/menu.png" alt="" class="menu">
 		<?php
-		echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );
-		echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
-		_e( 'Menu', 'twentyseventeen' );
+		
+		
 		?>
 	</button>
 

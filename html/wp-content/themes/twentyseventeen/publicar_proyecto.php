@@ -176,13 +176,14 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	           processData: false,
 	           success: function(data)
 	           {
-	           		console.log(data);
-	               alert(data);
+	           		
+	               
 	               if (data== -1){
-	                alert ("Nose pudo modificar el perfil");
+	                alert ("Nose pudo enviar el requerimiento");
 	               } else {
-	                alert ("Modificación realizada con éxito");
-	                jQuery('#presupuesto').data('bootstrapValidator').resetForm();
+	                alert ("Se envio correctamente");
+                    setTimeout("location.href = '"+base+"';",2000);
+	                
 	               }
 	           }
 	         });
@@ -190,29 +191,40 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 });
 
 </script>
+<?php
+    while ( have_posts() ) : the_post();
 
+             the_content();
+
+            endwhile; // End of the loop.
+            
+
+?>
+<div class="fondo2">
 	<div  class="container">
 		<form  enctype="multipart/form-data" id="presupuesto" action="/eds" method="post" class="presupuesto" data-toggle="validator">
 			<div class="row form1">
-				<div class="pr_ca">
-					<span>Solicita ya presupuesto para tu proyecto</span>
-				</div>
+				
+                <div class="col-lg-8 col-md-8 co-sm-8 col-xs-12">
 				<div class="pr_form">
-					<div class="fil group1 boxform form-group">
+					<div class="rowcamposcon row group1 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<span class="control-label">¿Qué necesitas?</span>
 						</div>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 							<select id="quenecesitas" name="quenecesitas" class="form-control">
-							  <option value="" selected="true">Seleccione una opción</option>
-							  <option value="1">Op1</option>
-							  <option value="2">Op2</option>
-							  <option value="3">Op3</option>
-							  <option value="4">Op4</option>
+							    <option value="" selected="true">Seleccione una opción</option>							  
+                                <option value="App Android">App Android</option>
+                                <option value="App iOS">App iOS</option>
+                                <option value="App iOS + Android">App iOS + Android</option>
+                                <option value="Sitio WEB">Sitio WEB</option>
+                                <option value="Juego para móviles">Juego para móviles</option>
+                                <option value="Otros">Otros</option>
+
 							</select>					
 						</div>
 					</div>
-					<div class="fil group1 boxform form-group">
+					<div class="rowcamposcon row group1 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<span class="control-label">Email</span>
 						</div>
@@ -220,7 +232,7 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							<input type="text" class="form-control" name="email">
 						</div>
 					</div>
-					<div class="fil group1 boxform form-group">
+					<div class="rowcamposcon row group1 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<span class="control-label">Telefono</span>
 						</div>
@@ -228,15 +240,19 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							<input type="text" class="form-control" name="telefono">
 						</div>
 					</div>
-					<button type="button" class="button button-primary" onclick="continuar()">Continuar</button>
+                    <div class="btnes textcenter col-lg-8 col-lg-offset-4 col-md-offset-4 col-md-8 col-sm-12 col-xs-12">
+					   <button type="button" class="button button-primary btnprin" onclick="continuar()">Continuar</button>
+                    </div>
+                </div>
 				</div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 textcenter ton"><img class="" src="http://kentiastudio.mx/wp-content/uploads/2017/12/pre.png" /></div>
 			
 			</div>
 
 				<div class="row form2">
 				
 				<div class="pr_form">
-					<div class="fil group2 boxform form-group">
+					<div class="rowcamposcon row group2 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<span class="control-label">Descripción del Proyecto</span>
 						</div>
@@ -244,7 +260,7 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							<textarea name="descripcion" id="descripcion" class="form-control"> </textarea>			
 						</div>
 					</div>
-					<div class="fil group2 boxform form-group">
+					<div class="rowcamposcon row group2 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<span class="control-label">Archivo</span>
 						</div>
@@ -252,7 +268,7 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							<input type="file" id="files" name="files" class="form-control">
 						</div>
 					</div>
-					<div class="fil group1 boxform form-group">
+					<div class="rowcamposcon row group1 boxform form-group btnen">
 						<input type="submit" name="enviar" class="button button-primary"  value="Enviar">
 					</div>
 			
@@ -270,6 +286,7 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
             ?>
 
    </div>
+</div> 
  <!--End movil -->
 <?php //get_sidebar(); ?>
 <?php get_footer();   

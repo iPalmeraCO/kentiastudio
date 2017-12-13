@@ -63,6 +63,13 @@
 
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
 		});
+
+			menuToggle.on( 'mouseover', function() {
+			siteNavContain.toggleClass( 'toggled-on' );
+
+			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
+		});
+
 	})();
 
 	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.

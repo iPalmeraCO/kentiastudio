@@ -44,12 +44,20 @@
 
 jQuery( document ).ready(function() {
     var elementPosition = jQuery('#masthead').offset();
+    var home="<?php echo is_front_page(); ?>";
 
 jQuery(window).scroll(function(){
         if(jQuery(window).scrollTop() > 20){
               jQuery('#masthead').addClass("menuflotante");
+              if (!home){
+              	jQuery('#masthead').removeClass('menuinicial');	
+              }
+              
         } else {
             jQuery('#masthead').removeClass('menuflotante');
+            if (!home){
+            jQuery('#masthead').addClass("menuinicial");
+        	}
         }    
 });
 
@@ -58,7 +66,7 @@ jQuery(window).scroll(function(){
 </script>
 <style type="text/css">
 	.tp-bullets{
-		width: 100% !important;
+		
 	}
 
 	.hephaistos .tp-bullet {
@@ -86,11 +94,10 @@ jQuery(window).scroll(function(){
 
 .js .menu-toggle, .js .dropdown-toggle {
     display: block !important;
+    float: right;
 }
 
-.js .main-navigation > div > ul {
-	display: none !important;
-}
+
 }
 .top-menu {
 	display: none;
