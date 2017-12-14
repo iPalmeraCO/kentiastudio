@@ -25,7 +25,7 @@ public function __construct()
         $this->host     = "smtp.gmail.com";
         $this->username = "julian.escobar@ipalmera.co";
         $this->password = "Riverplate_12";
-        $this->namesend = "Web Page Sinergia";
+        $this->namesend = "Kentia Studio";
         $this->secure   = "tls";
         $this->port     = "587";        
     }
@@ -61,7 +61,9 @@ public function enviarmail($emailenviar, $nombre, $asunto, $plantilla, $archivo)
 	    $mail->Subject =  $asunto;
 	    $mail->Body    =  $plantilla;	    
 	    $mail->CharSet = 'UTF-8';	
-	    $mail->AddAttachment($archivo['tmp_name'], $archivo['name']);
+	    if ($archivo != -1){
+	    	$mail->AddAttachment($archivo['tmp_name'], $archivo['name']);	
+		}	    
 	    $mail->send();
 	    
 	} catch (Exception $e) {

@@ -39,7 +39,7 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	function continuar(){
 		
 		var valid= jQuery(".group1.has-success").length;
-		if (valid == 3){
+		if (valid == 4){
 			jQuery(".form1").hide();
 			jQuery(".form2").show();
 		} else {
@@ -59,6 +59,14 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
             validating: 'glyphicon glyphicon-refresh'
         },*/
         fields: {
+             nombre: {
+                validators: {
+                    
+                    notEmpty: {
+                        message: 'Por favor ingresa el nombre'
+                    }
+                }
+            },
                quenecesitas: {
                 validators: {
                        callback: {
@@ -174,14 +182,16 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	           data:formData, // serializes the form's elements.
 	           contentType: false,
 	           processData: false,
+                beforeSend:function(){
+                jQuery("#myModaldos").modal("show");
+               },
 	           success: function(data)
 	           {
-	           		
-	               
+                    jQuery("#myModaldos").modal("hide");
 	               if (data== -1){
 	                alert ("Nose pudo enviar el requerimiento");
 	               } else {
-	                alert ("Se envio correctamente");
+	                jQuery("#myModal").modal('show');
                     setTimeout("location.href = '"+base+"';",2000);
 	                
 	               }
@@ -224,6 +234,15 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							</select>					
 						</div>
 					</div>
+                    <div class="rowcamposcon row group1 boxform form-group">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <span class="control-label">Nombre</span>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            <input type="text" class="form-control" name="nombre">
+                        </div>
+                    </div>
+
 					<div class="rowcamposcon row group1 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<span class="control-label">Email</span>
@@ -234,7 +253,7 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 					</div>
 					<div class="rowcamposcon row group1 boxform form-group">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<span class="control-label">Telefono</span>
+							<span class="control-label">Teléfono</span>
 						</div>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 							<input type="text" class="form-control" name="telefono">
@@ -245,11 +264,12 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
                     </div>
                 </div>
 				</div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 textcenter ton"><img class="" src="http://kentiastudio.mx/wp-content/uploads/2017/12/pre.png" /></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 textcenter ton"><img class="pre" src="http://kentiastudio.mx/wp-content/uploads/2017/12/icono-presupuesto.svg" /></div>
 			
 			</div>
 
 				<div class="row form2">
+                <div class="col-lg-8 col-md-8 co-sm-8 col-xs-12">
 				
 				<div class="pr_form">
 					<div class="rowcamposcon row group2 boxform form-group">
@@ -265,25 +285,25 @@ yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							<span class="control-label">Archivo</span>
 						</div>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="file" id="files" name="files" class="form-control">
+                            <div class="file-input-wrapper">
+                                <label for="files" class="file-input-button"><img src="http://kentiastudio.mx/wp-content/themes/twentyseventeen/assets/images/iconoarchivo.svg" alt="">Seleccionar Archivo</label>
+                                <input type="file" id="files" name="files" class="form-control">
+                            </div>
+							
 						</div>
 					</div>
-					<div class="rowcamposcon row group1 boxform form-group btnen">
-						<input type="submit" name="enviar" class="button button-primary"  value="Enviar">
+					<div class="btnen textcenter col-lg-8 col-lg-offset-4 col-md-offset-4 col-md-8 col-sm-12 col-xs-12">
+						<input type="submit" name="enviar" class="button button-primary btnprin"  value="Enviar">
 					</div>
+
 			
+            </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 textcenter ton"><img class="pre" src="http://kentiastudio.mx/wp-content/uploads/2017/12/icono-presupuesto.svg" /></div>
 			</div>
 
 		</form>
-    <?php
-            // echo do_shortcode("[metaslider id=22]"); 
-            
-            while ( have_posts() ) : the_post();
-
-               the_content();
-
-            endwhile; // End of the loop.
-            ?>
+    
 
    </div>
 </div> 

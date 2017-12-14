@@ -45,6 +45,7 @@
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.menu-toggle' );
 	siteNavContain = masthead.find( '.main-navigation' );
+	var main = masthead.find( '.re' );
 	siteNavigation = masthead.find( '.main-navigation > div > ul' );
 
 	// Enable menuToggle.
@@ -64,8 +65,31 @@
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
 		});
 
+			/*main.on( 'mouseout', function() {
+				//Si el menu esta activo
+				if ((".toggle-on").length>0){
+					var isHovered = $('.menu-menu-footer-container').is(":hover"); 
+					if (!isHovered){
+						siteNavContain.removeClass( 'toggled-on' );
+						console.log("POR FUERA");
+					}else{
+						console.log("POR DENTRO");
+					}
+				}
+			
+
+			
+		});*/
+			$(".re").mouseleave(function() {
+				if ((".toggle-on").length>0){
+					siteNavContain.removeClass( 'toggled-on' );
+				}
+					    
+					   
+					});
+
 			menuToggle.on( 'mouseover', function() {
-			siteNavContain.toggleClass( 'toggled-on' );
+			siteNavContain.addClass( 'toggled-on' );
 
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
 		});

@@ -951,6 +951,7 @@ textarea {
 	border-radius: 3px;
 	display: block;
 	padding: 0.7em;
+	    height: 44px;
 	width: 100%;
 }
 
@@ -4443,7 +4444,7 @@ div#rev_slider_4_3_wrapper .tp-tabs-inner-wrapper div:nth-child(5):before {
     width: 100%;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     position: fixed;
-    z-index: 100000;
+    z-index: 1000;
     height: 84px;
     top: 0;
     display: inline-block;
@@ -4544,9 +4545,11 @@ a.menu-scroll-down {
     /* align-items: center; */
 }
 .nombre {
-    font-family: 'Work Sans', sans-serif;
+        font-family: 'Work Sans', sans-serif;
     font-size: 20px;
     color: black;
+    margin-top: 0px;
+    padding-top: 0px;
     line-height: 23px;
     font-weight: 600;
 }
@@ -4586,7 +4589,7 @@ a.menu-scroll-down {
    padding: 0px !important;
 }
 .numera {
-    color: #3dd381;
+    color: #606eea;
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
     line-height: 20px;
@@ -4600,6 +4603,14 @@ a.menu-scroll-down {
     font-weight: 500;
 }
 @media screen and (max-width: 480px){
+	.servicios-caja {
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+	.modal-dialog {
+    top: 1% !important;
+}
 	a.slito {
     width: 100% !important;
     display: flex;
@@ -4628,7 +4639,7 @@ a.menu-scroll-down {
     justify-content: flex-start;
     flex-direction: column;
     padding: 10px;
-    height: 190px;
+    height: 290px;
     /* display: flex; */
     /* align-items: center; */
 }
@@ -4644,10 +4655,10 @@ a.menu-scroll-down {
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .slick-image-slide, .slide-wrap {
-    height: 290px !important;
+    height: 380px !important;
 }
 	.project {
-    height: 250px !important;
+    height: 350px !important;
 }
 	.texto {
     display: flex;
@@ -4835,7 +4846,6 @@ width: 100%;
 }
 
 .menuinicial .navigation-top {
-    background-color: black !important;
 }
 div#rev_slider_15_2 {
     position: relative;
@@ -5068,4 +5078,112 @@ a.slito:hover{
 }
 .vacio img {
     width: 256px;
+}
+.row.copyright {
+    background-color: #e9e9e9;
+    padding: 15px;
+    font-family: "Work Sans" !important;
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+}
+.row.copyright span{
+   
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+}
+.col-md-12.center-align {
+    display: flex;
+    justify-content: center;
+}
+span.linea-right {
+    padding: 0px 10px;
+    border-right: 1px solid #000;
+}
+span.termino {
+    padding: 0px 10px;
+}
+span.termino a{
+    color: #3dd381;
+}
+textarea.form-control {
+    height: auto;
+    border: none !important;
+}
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, .has-success.radio label, .has-success.radio-inline label {
+    color: #3dd381 !important;
+}
+img.presupuestos {
+    width: 400px;
+}
+img.pre {
+    width: 200px;
+}
+.btnen input, .btnprin {
+    background-color: transparent;
+    color: #222;
+    border: 2px solid #3dd381;
+    font-size: 15px;
+}
+.file-input-wrapper {
+  display: inline-block;
+  overflow-y: hidden;
+}
+.file-input-wrapper .file-input-button {
+  color: white;
+    border: 1px solid #3dd381;
+    background: #3dd381;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* width: 140px; */
+    padding: 0px 20px;
+    font-family: "Work Sans" !important;
+    /* height: 40px; */
+    font-weight: 400 !important;
+    display: inline;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    /* padding-top: 9px; */
+    text-align: center;
+    text-align: center;
+  transition: color 500ms, background-color 500ms;
+  -moz-transition: color 500ms, background-color 500ms;
+  -webkit-transition: color 500ms, background-color 500ms;
+  -o-transition: color 500ms, background-color 500ms;
+  -ie-transition: color 500ms, background-color 500ms;
+}
+.modal-dialog {
+    top: 10%;
+}
+.file-input-wrapper input {
+  display: none !important;
+}
+.file-input-button img{
+    width: 42px;
+}
+.modal-header {
+    background-color: #000;
+    border-bottom: 4px solid #3dd381 !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.modal-header img.logo-kentia {
+    width: 200px;
+}
+.modal-body.center-align-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img.img-mk {
+    width: 130px;
+    margin-left: -36px;
+}
+.sus{
+	 font-family: "Work Sans" !important;
+	 font-size: 14px;
+
 }

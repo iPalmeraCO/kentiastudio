@@ -65,10 +65,10 @@ function get_presupuesto( ){
           jQuery(".valoresresultados").show();
           preciomx   = result['preciomx'];
           precioeuro = result['precioeuro'];
-          jQuery("#r1").html(jQuery( "#costos option:selected" ).text());
-          jQuery("#r2").html(jQuery( "#servicios option:selected" ).text());
-          jQuery(".titpro").html(jQuery( "#tipoproyecto option:selected" ).text());
-          jQuery(".nombpro").html(jQuery( "#quenecesitas option:selected" ).text());
+          jQuery("#r1").html(jQuery( "#servicios option:selected" ).text());
+          jQuery("#r2").html(jQuery( "#costos option:selected" ).text());
+          jQuery(".titpro").html(jQuery( "#quenecesitas option:selected" ).text());
+          jQuery(".nombpro").html(jQuery( "#tipoproyecto option:selected" ).text());
           
           if (quenecesitas !="4" && quenecesitas != 6){
           	//var src="/wp-content/themes/twentyseventeen/assets/images/telefono.png"
@@ -80,7 +80,9 @@ function get_presupuesto( ){
           jQuery("#imgresult").attr("src",src);	
           jQuery(".vacio").hide();
           jQuery("#res").html("$ "+formatNumber(preciomx) + " MXN ");
+          jQuery(".slito").attr("href", "solicitar-presupuesto?c1="+quenecesitas+"&c2="+tipoproyecto+"&c3="+servicios+"&c4="+costos);
           jQuery(".slito").show();
+          
           
         },
       });

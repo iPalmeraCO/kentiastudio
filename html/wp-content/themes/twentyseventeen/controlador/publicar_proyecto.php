@@ -1,5 +1,6 @@
 <?php
 require_once("../class/MailM.php");
+require_once("../class/combos.php");
 /*
 $foto = reset($_FILES); 	 	
 $sourcePath = $foto['tmp_name'];       // Imagen temporal
@@ -22,9 +23,13 @@ $targetPath = "../proyectos/".$nombrearchivo; // Target path where file is to be
 $foto = reset($_FILES);
 $html  = "Proyecto: ".$_POST['quenecesitas']."<br>";
 $html .= "Descripción: ".$_POST["descripcion"]."<br>";
+$html .= "Nombre: " . $_POST["nombre"]."<br>";
 $html .= "Correo: " . $_POST["email"]."<br>";
 $html .= "Telefono: " . $_POST["telefono"]."<br>";
 $mail = new MailM();
+//$mail->enviarmail("contacto@kentiastudio.mx", "Usuario ", "Proyecto", $html, $foto);
+$combos = new Combos();
+$combos->registrar_publicarproyecto($_POST['nombre'], $_POST['quenecesitas'], $_POST['email'], $_POST['telefono'], $_POST['descripcion'],"DS");
 $mail->enviarmail("julian.escobar@ipalmera.co", "Usuario ", "Proyecto", $html, $foto);
 
 

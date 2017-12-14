@@ -591,3 +591,10 @@ function formulario_precios() {
     return ob_get_clean(); 
 }
 add_shortcode('formprecio', 'formulario_precios');
+
+function formulario_contacto() {
+	ob_start();
+    get_template_part('formcontacto');
+    return ob_get_clean(); 
+}
+add_shortcode('formcontacto', 'formulario_contacto');
